@@ -1,7 +1,7 @@
 float GetAtmPressure (void) {
   //return Pressure mBar
   char status;
-  double T, P, p0, a;
+  double T, P;
 
   status = pressure.startTemperature();
   if (status != 0)
@@ -25,9 +25,9 @@ float GetAtmPressure (void) {
         status = pressure.getPressure(P, T);
         if (status != 0)
         {
-          Serial.print(F ("Pressure: "));
-          Serial.print(P * 0.75, 2);
-          Serial.println(F (" mmHg"));
+          //Serial.print(F ("Pressure: "));
+          //Serial.print(P * 0.75, 2);
+          //Serial.println(F (" mmHg"));
 
           //return P * 0.75;
             return float(P);
