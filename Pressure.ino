@@ -32,13 +32,13 @@ float GetAtmPressure (void) {
           //return P * 0.75;
             return float(P);
         }
-        else Serial.println(F ("error retrieving pressure measurement\n"));
+        else return 0;
       }
-      else Serial.println(F ("error starting pressure measurement\n"));
+      else return 0;
     }
-    else Serial.println(F ("error retrieving temperature measurement\n"));
+    else return 0;
   }
-  else Serial.println(F ("error starting temperature measurement\n"));
+  else return 0;
 }
 
 // Температура кипения воды в зависимости от текущего атмосферного давления

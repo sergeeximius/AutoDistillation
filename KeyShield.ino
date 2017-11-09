@@ -461,7 +461,7 @@ void GetPressKey(byte ScreenValue)
 
   if (SensorIsActive == false and KeyIsActive == true and (timeNow - timeKeyLastActive) > 5000)
   {
-    KeyIsActive == false;
+    KeyIsActive = false;
     SensorIsActive = true;
     //Serial.println("Key not active");
   }
